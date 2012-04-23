@@ -13,7 +13,7 @@ Readium.Utils.LocalStorageAdaptor = function(storeName) {
 	var _data;
 
 	var save = function() {
-		localStorage.setItem(storeName, JSON.stringify(_data));
+		//localStorage.setItem(storeName, JSON.stringify(_data));
 	};
 
 	var create = function(model) {
@@ -47,9 +47,10 @@ Readium.Utils.LocalStorageAdaptor = function(storeName) {
 	return function(method, model, options) {
 
 		var resp;
+		/*
 		var strData = localStorage.getItem(storeName);
 		_data = ( strData && JSON.parse(strData)) || {};
-
+        
 		switch (method) {
 			case "read":    resp = model.id ? find(model) : findAll(); break;
 			case "create":  resp = create(model);                            break;
@@ -66,6 +67,7 @@ Readium.Utils.LocalStorageAdaptor = function(storeName) {
 				options.error("Record not found");	
 			}
 		}
+		*/
 	};
 
 };
